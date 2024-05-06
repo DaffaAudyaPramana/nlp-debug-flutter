@@ -199,10 +199,10 @@ model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['ac
 model.summary()
 
 #  Mendefinisikan ukuran batch.
-batch_size = 10
+batch_size = 64
 
 # Mendefinisikan jumlah epoch.
-epochs = 800
+epochs = 400
 
 # Melatih model dengan data pelatihan dan validasi, menggunakan callback yang telah didefinisikan.
 model.fit([encoder_input_data_train, decoder_input_data_train],
