@@ -1,13 +1,27 @@
 question|answer
-siang|selamat siang hari kak
-pagi|ya kak pagi yang cerah pagi ini ya
-siang|siang kak, masih puasa kan?
-sore|sore juga kak, gimana lancar hari ini?
-malam|malam kak, masih semangat?
-selamat pagi|selamat pagi juga
-selamat siang|selamat siang juga
-selamat sore|selamat sore juga
-selamat malam|selamat malam juga
+Apa saja alat debugging yang tersedia untuk Flutter?|Debugger, DevTools, Flutter Inspector, Log, dan Crashlytics.
+Bagaimana menggunakan debugger?|Buka aplikasi dalam mode debug, atur breakpoint, jalankan aplikasi, dan lacak eksekusi kode.
+Bagaimana menggunakan DevTools?|Buka DevTools (Debug > DevTools), lihat informasi aplikasi (log, kinerja, jaringan) untuk menemukan dan memperbaiki masalah.Buka DevTools (Debug > DevTools), lihat informasi aplikasi (log, kinerja, jaringan) untuk menemukan dan memperbaiki masalah.
+Bagaimana menggunakan Flutter Inspector?|Buka aplikasi dalam mode debug, buka Flutter Inspector (Debug > Flutter Inspector), periksa widget tree secara visual, ubah state dan lihat rendering.
+Bagaimana menggunakan log?|Gunakan print() untuk konsol atau Logger untuk file.
+Apa saja kesalahan umum yang terjadi saat debugging Flutter?|Kesalahan umum termasuk NullPointerException, FormatException, StateError, AssertionError, dan Unhandled Exception.Kesalahan umum termasuk NullPointerException, FormatException, StateError, AssertionError, dan Unhandled Exception.
+Bagaimana mengatasi NullPointerException?|Periksa objek sebelum akses, gunakan operator null-safe (?.) dan ?? untuk nilai default.
+Bagaimana mengatasi FormatException?|Periksa format data, gunakan try-catch dan alat seperti regex101.com untuk validasi.
+Bagaimana mengatasi StateError?|Ubah state hanya dalam build method, gunakan setState() atau ValueListenableBuilder(), atau plugin seperti flutter_bloc.
+Bagaimana mengatasi AssertionError?|Periksa asumsi dalam kode, gunakan debugger dan log untuk melacak penyebab.
+Bagaimana mengatasi Unhandled Exception?|Gunakan try-catch block, widget ErrorHandler(), atau layanan seperti Sentry.io.
+Bagaimana cara men-debug widget yang tidak dirender?|Periksa state widget, pastikan widget terhubung dengan benar ke widget lain, dan periksa log untuk error terkait widget.
+Bagaimana cara men-debug widget yang tidak merespons input pengguna?|Periksa event handler widget, pastikan widget terhubung dengan benar ke widget lain, dan periksa log untuk error terkait input pengguna.
+Bagaimana cara men-debug widget yang menampilkan layout yang salah?|Periksa constraint widget, pastikan widget terhubung dengan benar ke widget lain, dan periksa log untuk error terkait layout.
+Bagaimana cara men-debug aplikasi yang lambat?|Gunakan DevTools untuk profiling aplikasi, identifikasi bottleneck, dan optimalkan kode.
+Bagaimana cara men-debug aplikasi yang boros memori?|Gunakan DevTools untuk profiling memori aplikasi, identifikasi kebocoran memori, dan optimalkan penggunaan memori.
+Bagaimana cara men-debug aplikasi yang boros baterai?|Gunakan DevTools untuk profiling konsumsi baterai aplikasi, identifikasi aktivitas yang boros baterai, dan optimalkan kode.
+Bagaimana cara men-debug masalah jaringan?|Gunakan DevTools untuk inspeksi jaringan, periksa request dan response, dan simulasikan kondisi jaringan.
+Bagaimana cara men-debug API yang tidak merespons?|Periksa URL API, pastikan header dan body request benar, dan periksa log untuk error terkait API.
+Bagaimana cara men-debug data yang tidak terduga dari API?|Periksa struktur data JSON API, pastikan data diproses dengan benar, dan periksa log untuk error terkait data.
+Bagaimana cara men-debug masalah deployment ke perangkat fisik?|Pastikan perangkat terhubung dengan benar, periksa log untuk error terkait deployment, dan gunakan alat debugging perangkat.
+Bagaimana cara men-debug masalah deployment ke App Store atau Google Play?|Pastikan mengikuti guideline Apple dan Google, periksa log untuk error terkait deployment, dan gunakan alat debugging platform.
+Bagaimana cara men-debug crash yang terjadi setelah deployment?|Gunakan layanan crash reporting seperti Crashlytics, periksa log crash, dan perbaiki kode yang menyebabkan crash.Gunakan layanan crash reporting seperti Crashlytics, periksa log crash, dan perbaiki kode yang menyebabkan crash.
 Bagaimana cara debug flutter?|Anda dapat menggunakan debugger bawaan dari Flutter, atau Anda juga bisa menggunakan tools eksternal seperti IntelliJ IDEA, Android Studio, atau VS Code.
 Apa yang dimaksud dengan hot reload dalam konteks debugging flutter?|Hot reload adalah fitur di Flutter yang memungkinkan Anda melakukan perubahan kode secara langsung tanpa perlu me-restart aplikasi dari awal, sehingga mempercepat proses debugging.
 Apakah flutter memiliki dukungan untuk debugging remote?|Ya, Flutter memiliki dukungan untuk debugging remote, yang memungkinkan Anda untuk men-debug aplikasi Flutter pada perangkat fisik yang berbeda atau emulator yang berjalan di mesin yang berbeda.
@@ -825,7 +839,6 @@ Apa itu "static code analysis" dalam konteks debugging Flutter?|Static code anal
 Bagaimana cara melakukan static code analysis dalam debugging Flutter?|Anda dapat melakukan static code analysis dalam debugging Flutter dengan menggunakan alat bantu seperti Dart Analyzer atau pustaka pihak ketiga seperti Pedantic, kemudian menjalankan analisis statis terhadap kode sumber aplikasi Anda untuk mengidentifikasi masalah atau kesalahan potensial, dan memperbaiki mereka sesuai dengan rekomendasi yang diberikan.
 Apa itu "debugging network issues" dalam konteks Flutter?|Debugging network issues adalah proses memeriksa, mengidentifikasi, dan memperbaiki masalah yang terkait dengan komunikasi jaringan dalam aplikasi Flutter, seperti kesalahan koneksi, penggunaan API yang tidak benar, atau respons yang tidak sesuai dari server.
 Bagaimana cara melakukan debugging network issues dalam aplikasi Flutter?|Anda dapat melakukan debugging network issues dalam aplikasi Flutter dengan menggunakan alat bantu seperti proxy server atau alat monitoring jaringan, memeriksa log atau laporan kesalahan dari permintaan jaringan, dan memastikan bahwa kode aplikasi Anda menangani kasus-kasus yang mungkin terjadi selama komunikasi jaringan dengan benar.
-Apa yang dimaksud dengan "debugging UI issues" dalam konteks Flutter?|Debugging UI issues adalah proses memeriksa, mengidentifikasi, dan memperbaiki masalah yang terkait dengan tampilan atau antarmuka pengguna dalam aplikasi Flutter, seperti
 Apa yang dimaksud dengan "debugging UI issues" dalam konteks Flutter?|Debugging UI issues adalah proses memeriksa, mengidentifikasi, dan memperbaiki masalah yang terkait dengan tampilan atau antarmuka pengguna dalam aplikasi Flutter, seperti tata letak yang tidak benar, tampilan yang tidak sesuai, atau perilaku interaktif yang tidak diharapkan.
 Bagaimana cara melakukan debugging UI issues dalam aplikasi Flutter?|Anda dapat melakukan debugging UI issues dalam aplikasi Flutter dengan menggunakan alat bantu seperti widget Inspector untuk memeriksa hierarki widget, properti-widget, dan status-widget, serta dengan menguji aplikasi pada berbagai perangkat dan orientasi layar untuk mengidentifikasi dan memperbaiki masalah tampilan yang mungkin terjadi.
 Apa itu "error handling" dalam konteks debugging Flutter?|Error handling adalah proses menangkap, mengelola, dan menangani pengecualian atau kesalahan yang terjadi selama eksekusi aplikasi Flutter, untuk mencegah crash dan memberikan pengalaman pengguna yang lebih baik.
